@@ -2,9 +2,6 @@
     "name": "@monodemo/service-a",
     "private": true,
     "version": "1.0.0",
-    "workspaces": {
-        "nohoist": ["**"]
-      },
     "scripts": {
         "build": "npm run clean && npm run compile",
         "clean": "rm -rf ./dist && rm -rf tsconfig.build.tsbuildinfo",
@@ -13,7 +10,9 @@
         "start": "npx ./dist/index.js"
     },
     "dependencies": {
-        "@monodemo/common": "1.0.0"
+        "@monodemo/common": "1.0.0",
+        "@types/express": "^4.17.9",
+        "express": "^4.17.1"
     },
     "devDependencies": {
         "@types/jest": "^26.0.18",
